@@ -4,3 +4,4 @@ resources:
   - hajimari
   - homeassistant
   - kube-prometheus-stack
+  - speedtest-exporter

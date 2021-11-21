@@ -16,14 +16,14 @@ spec:
         name: k8s-at-home-charts
         namespace: flux-system
       interval: 5m
-    values:
-      image:
-        repository: ghcr.io/miguelndecarvalho/speedtest-exporter
-        tag: v3.3.4
-      metrics:
-        enabled: true
-        serviceMonitor:
-          interval: 60m
-          scrapeTimeout: 1m
-        prometheusRule:
-          enabled: false
+  values:
+    image:
+      repository: ghcr.io/miguelndecarvalho/speedtest-exporter
+      tag: v3.3.4
+    metrics:
+      enabled: true
+      serviceMonitor:
+        interval: 60m
+        scrapeTimeout: 1m
+      prometheusRule:
+        enabled: false

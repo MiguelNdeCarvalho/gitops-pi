@@ -40,6 +40,10 @@ spec:
           - hosts:
               - "home.${SECRET_DOMAIN}"
             secretName: "home-assistant-tls"
+    persistence:
+      config:
+        enabled: true
+        existingClaim: home-assistant-config
     resources:
       requests:
         cpu: 100m
@@ -62,8 +66,8 @@ spec:
         - "/config/.vscode"
         ingress:
           enabled: true
+          ingressClassName: "traefik"
           annotations:
-            kubernetes.io/ingress.class: "traefik"
             cert-manager.io/cluster-issuer: "letsencrypt-production"
             traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
           hosts:

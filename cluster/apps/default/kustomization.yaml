@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
   - hajimari
   - homeassistant
-  - kube-prometheus-stack
   - speedtest-exporter
